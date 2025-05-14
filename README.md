@@ -1,6 +1,6 @@
 # Projeto de Integração com Relógios de Ponto CONTROL ID V1
 -Esse sistema foi desenvolvido para auxiliar pequenas empresas que tem mais de um relógio de ponto controlid e precisam coletar os arquivos afd para o sistema de gestão
-do departamento pessoal.
+do departamento pessoal sem ser necessário conectar em um por um , baixando em lote tudo em um sistema unificado.
 
 ![alt text](image.png)
 ![alt text](image-1.png)
