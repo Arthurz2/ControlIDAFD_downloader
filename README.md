@@ -74,3 +74,6 @@ Copiar
 Editar
 /src
 
+Os arquivos AFD baixados são baixados ja no mesmo formato da controlid quando gerado.Quando utilizado o download
+em massa os arquivos vem compactados em .rar
+
