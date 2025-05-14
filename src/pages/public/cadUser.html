@@ -1,0 +1,230 @@
+<div class="container_cadastro_users">
+    <div class="header_box_funcionarios_cad">
+        <h1>Funcionarios Cadastradas</h1>
+        <div class="line_red"></div>
+        <p>Aqui você encontra funcionarios cadastrados por loja</p>
+    </div>
+
+    <div class="select_loja">
+        <select id="relogioLoja" name="relogioLoja">
+            <option value="DownloadAfd01">Relogio Loja 01</option>
+            <option value="DownloadAfd02">Relogio Loja 02</option>
+            <option value="DownloadAfd03">Relogio Loja 03</option>
+            <option value="DownloadAfd04">Relogio Loja 04</option>
+            <option value="DownloadAfd05">Relogio Loja 05</option>
+            <option value="DownloadAfd06">Relogio Loja 06</option>
+            <option value="DownloadAfd07">Relogio Loja 07</option>
+        </select> 
+
+        <button class="loadUsersBtn" id="loadUsersBtn">Carregar Funcionários</button> 
+    </div>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>PIS</th>
+            <th>Matrícula</th>
+            <th>N° de digitais</th>
+            <th>RFID</th>
+            <th>Barras</th>
+            <th>Senha</th>
+            <th>Administrador</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody id="usersTableBody">
+
+    </tbody>
+</table>
+
+<div class="pagination">
+    <button id="prevPageBtn" disabled>Anterior</button>
+    <button id="nextPageBtn">Próximo</button>
+</div>
+
+<div class="container_cad_new_user">
+
+    <div class="container_cad_user">
+        <h1>Cadastrar Funcionario</h1>
+        <div class="line_red"></div>
+    </div>
+
+    
+    <div class="select_loja" id="selectLojaCadUser">
+        <select id="relogioLojaCadUser" name="relogioLoja">
+            <option value="DownloadAfd01">Relogio Loja 01</option>
+            <option value="DownloadAfd02">Relogio Loja 02</option>
+            <option value="DownloadAfd03">Relogio Loja 03</option>
+            <option value="DownloadAfd04">Relogio Loja 04</option>
+            <option value="DownloadAfd05">Relogio Loja 05</option>
+            <option value="DownloadAfd06">Relogio Loja 06</option>
+            <option value="DownloadAfd07">Relogio Loja 07</option>
+        </select> 
+    </div>
+
+    <form id="userForm">
+        
+            <div class="row_name">
+                <div class="row_cad">
+                <label for="name">Nome:</label>
+                <input class="form-control-cad" type="text" id="name-user" name="name" required  style="text-transform: uppercase;">
+                </div>
+
+                <div class="row_cad">
+                <label for="pis">PIS:</label>
+                <input class="form-control-cad" type="text" id="pis-user" name="pis" maxlength="12" required>
+                </div>
+            </div>
+
+
+
+            <div class="row_register">
+                <div class="row_cad">
+                <label for="registration">Matricula:</label>
+                <input class="form-control-cad" type="text" id="registration-user" name="registration" maxlength="12">
+                </div>
+
+                <div class="row_cad"> 
+                <label for="bars">Barras:</label>
+                <input class="form-control-cad" type="text" id="bars-user" name="bars" >
+            </div>
+            </div>
+
+
+            <div class="row_code">
+                <div class="row_cad"> 
+                <label for="rfid">RFID:</label>
+                <input class="form-control-cad" type="number" id="rfid-user" name="rfid">
+                </div>
+
+                <div class="row_cad">
+                <label for="code">Código:</label>
+                <input class="form-control-cad" type="number" id="code-user" name="code" maxlength="6">
+                </div>
+            </div>
+
+
+        <div class="row_cad">
+        <label for="password">Senha:</label>
+        <input class="form-control-cad" type="password" id="password-user" name="password">
+        </div>
+
+        <div class="row_cad_button">
+
+        
+            <div class="select_loja" id="select_new_loja">
+        <label for="admin">Admin:</label>
+        <select id="admin-user" name="admin">
+            <option value="false">Não</option>
+            <option value="true">Sim</option>
+        </select>  
+        </div>
+
+        <button class="send_form_button_cad" type="submit">Cadastrar</button>
+    </div>
+
+    </form>
+
+</div>
+
+
+<div class="modal_edit_user" style="display: none;">
+    <div class="modal_container_edit_user">
+            <div class="header_modal_edit_user">
+                <h1>Usuário</h1>
+                <button id="closeBtnModalEditUser" class="closeBtnModalEditUser">
+                    <img src="../../assets/iconClose.svg" alt="">
+                </button>
+            </div>
+
+            <div class="rectangle_edit_user"></div>
+
+            <div class="modal-body">
+                <div class="tabbable-custom">
+
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="modal_editAddUser_tab_1">
+                            <div class="row">
+                                <div class="row_one">
+                                    <div class="col-6">
+                                        <label for="name">Nome</label>
+                                        <input type="text" id="name" class="form-control" value="" maxlength="" style="text-transform: uppercase;">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="pis">Pis</label>
+                                        <input type="text" id="pis" class="form-control" value="" maxlength="12">
+                                    </div>
+                                </div>
+
+                                <div class="row_two">
+                                    <div class="col-6">
+                                        <label for="registration">Matrícula</label>
+                                        <input type="text" id="registration" class="form-control" value="" maxlength="12">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="bars">Barras</label>
+                                        <input type="text" id="bars" class="form-control" value="">
+                                    </div>
+                                </div>
+
+                                <div class="row_tree">
+                                    <div class="col-6">
+                                        <label for="rfid">Rfid</label>
+                                        <input type="text" id="rfid" class="form-control" value="" maxlength="">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="code">Código</label>
+                                        <input type="text" id="code" class="form-control" value="" maxlength="6">
+                                    </div>
+                                </div>
+
+                                <div class="row_four">
+
+                                    <div class="col-6">
+                                        <label for="password">Senha</label>
+                                        <input type="text" id="password" class="form-control" value="">
+                                    </div>
+                                    <div class="col-6">
+                                        <label>Administrador</label>
+                                        <input type="checkbox" id="admin" class="toggle">
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-danger" id="cancelButton">Cancelar</button>
+                <button type="button" class="btn-success" id="saveButton">Salvar</button>
+            </div>
+
+
+    </div>
+</div>
+
+<div class="modal_loading">
+    <div class="content_modal">
+        <div class="img_rotate">
+            <img src="../assets/iconRotate.svg" alt="Loading" class="loading-img">
+        </div>
+        <p>Carregando...</p>
+    </div>
+</div>
+
+<div class="modal_error">
+    <div class="content_modal">
+        <div class="button_close_modal_error" id="closeModalError">
+            <img src="../assets/iconClose.svg" alt="close button">
+        </div>
+        <div class="img_rotate">
+            <img src="../assets/iconError.svg" alt="Loading">
+        </div>
+        <p>Erro de comunicação com o relogio...</p>
+    </div>
+</div>
