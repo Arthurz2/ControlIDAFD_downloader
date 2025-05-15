@@ -46,9 +46,8 @@ class Device {
     }
 }
 
-// Exemplo de uso:
+
 (async () => {
-    // Substitua '192.168.25.90' pelo IP do seu dispositivo
-    const device = new Device('192.168.25.90'); // Alterar IP aqui
+    const device = new Device('192.168.0.0'); 
     await device.login();
 })();
